@@ -2,8 +2,25 @@
 <html>
 <head>
   <title>HR MVP</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.min.js"></script>
 </head>
-<body>
+<body ng-app = "beerGarden">
+  <h1>Beer Garden</h1>
+  <nav>
+    <ul>
+      <li>Search</li>
+      <li>Beer List</li>
+      <li>Fav Beer List</li>
+    </ul>
+  </nav>
+  
+  <div ng-view ></div>
 
+  <script src="/app/app.js"></script>
+  <script src="../app/form/formController.js"></script>
+  <script src="../app/services/services.js"></script>
+  <script src="../app/beerList/beerListController.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+<div ng-controller="BeerList">
+  <h2>Craft Beer List</h2>
+  <div ng-repeat="beer in beerList">
+    <section>Name: {{ beer.name }}   |   Hops: {{ beer.ibu }}   |   ABV: {{ beer.abv }}</section>
+    <div>Description: {{ beer.description }}</div>
+    <br>
+    <br>
+  </div>
+</div>

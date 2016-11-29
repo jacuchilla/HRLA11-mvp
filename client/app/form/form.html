@@ -1,0 +1,17 @@
+<div ng-controller="BeerForm">
+  <form>
+    <br>
+    <label>Hops (ibu)</label>
+    <br>
+    <input type="text" ng-model="data.ibu">
+    <br>
+    <br>
+
+    <label>Alcohol (abv)</label>
+    <br>
+    <input type="text" ng-model="data.abv">
+    <br>
+    <br>
+    <button ng-click="searchBeers(data)">Search</button>
+  </form>
+</div>
