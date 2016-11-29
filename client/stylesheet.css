@@ -1,5 +1,5 @@
 body {
-  text-align: center;
+
 }
 
 ul {
@@ -18,5 +18,23 @@ li a {
 }
 
 section {
-  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 15px;
 }
+
+#name {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.container {
+  position: relative;
+  background-color: white;
+}
+
+nav {
+  font-size: 18px;
+}
+

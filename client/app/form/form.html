@@ -1,17 +1,18 @@
 <div ng-controller="BeerForm">
+    <div class="jumbotron">
+      <h1>Search for Brews</h1>
+    </div>
   <form>
-    <br>
-    <label>Hops (ibu)</label>
-    <br>
-    <input type="text" ng-model="data.ibu">
-    <br>
-    <br>
+    <div class="form-group">
+        <label for="hops">Hops</label>
+        <input type="text" class="form-control" ng-model="data.ibu" id="hops" placeholder="0-125 ibu">
+    </div>
 
-    <label>Alcohol (abv)</label>
-    <br>
-    <input type="text" ng-model="data.abv">
-    <br>
-    <br>
-    <button ng-click="searchBeers(data)">Search</button>
+    <div class="form-group">
+        <label for="alcohol">Alcohol</label>
+        <input type="text" class="form-control" ng-model="data.abv" id="alcohol" placeholder="0-25 abv">
+        <br>
+        <button type="button" class="btn btn-default btn-block" ng-click="searchBeers(data)">Search</button>
+    </div>
   </form>
 </div>

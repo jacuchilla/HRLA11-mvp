@@ -1,7 +1,10 @@
 <div ng-controller="FavBeerList">
-  <h2>Favorite Craft Beer List</h2>
-  <div ng-repeat="beer in favBeerList">
-    <section>Name: {{ beer.name }} | Hops: {{ beer.ibu }} | ABV: {{ beer.abv }}</section>
+  <div class="jumbotron">
+      <h1>My Favorite's List</h1>
+  </div>
+  <div ng-repeat="beer in favBeerList" class="col-lg-6">
+    <section id="name"> {{ beer.name }} </section>
+    <section>Hops:  {{ beer.ibu }} | ABV:  {{ beer.abv }} </section>
     <div>Description: {{ beer.description }}</div>
     <br>
     <br>
