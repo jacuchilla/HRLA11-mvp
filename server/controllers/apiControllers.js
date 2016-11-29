@@ -1,4 +1,6 @@
 var request = require('request')
+var models = require('../models/apiModels.js')
+
 
 var getBeerList = function(req, res) {
   var params = req.body;
@@ -12,6 +14,18 @@ var getBeerList = function(req, res) {
   })
 }
 
+var postFavBeerList = function(req, res) {
+  //console.log('HERES THE REQ FAV DATA from Controllers!!! ', req.body.name)
+  models.addBeerToFavs(req.body)
+}
+
+var getFavBeerList = function(req, res) {
+  console.log('triggered GETFAVBEERLIST REQ')
+  models.getFavList(function(err, data){
+    res.send(data)
+  })
+}
+
 
 
 
@@ -19,5 +33,7 @@ var getBeerList = function(req, res) {
 
 
 module.exports = {
-  getBeerList: getBeerList
+  getBeerList: getBeerList,
+  postFavBeerList: postFavBeerList,
+  getFavBeerList: getFavBeerList
 }

@@ -2,6 +2,7 @@ angular.module('beerGarden.services', [])
 
 .factory('Services', function($http) {
   var beerList;
+  var favList;
 
   var makeBeerListCall = function(data) {
     return $http({
@@ -19,9 +20,39 @@ angular.module('beerGarden.services', [])
     return beerList;
   }
 
+  var saveToFavs = function(beer) {
+    return $http({
+      method: 'POST',
+      url: '/api/favBeerList',
+      data: beer
+    })
+    .then(function(result) {
+      console.log('yes')
+    })
+
+  }
+
+  var callFavList = function() {
+    return $http({
+      method: 'GET',
+      url: '/api/favBeerList'
+    })
+    .then(function(result) {
+      console.log('all good')
+      favList = result.data
+    })
+  }
+
+  var grabFavBeerList = function() {
+    return favList;
+  }
+
   return {
     makeBeerListCall: makeBeerListCall,
-    grabBeerList: grabBeerList
+    grabBeerList: grabBeerList,
+    saveToFavs: saveToFavs,
+    grabFavBeerList: grabFavBeerList,
+    callFavList: callFavList
   }
 
 })

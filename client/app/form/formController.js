@@ -2,6 +2,7 @@ angular.module('beerGarden.form', [])
 
 .controller('BeerForm', function($scope, $location, Services) {
   $scope.data;
+  Services.callFavList()
   $scope.searchBeers = function(data) {
     // console.log('heres the data from form!  ',data);
     Services.makeBeerListCall(data)

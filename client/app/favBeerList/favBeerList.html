@@ -1,9 +1,8 @@
-<div ng-controller="BeerList">
-  <h2>Craft Beer List</h2>
-  <div ng-repeat="beer in beerList">
+<div ng-controller="FavBeerList">
+  <h2>Favorite Craft Beer List</h2>
+  <div ng-repeat="beer in favBeerList">
     <section>Name: {{ beer.name }} | Hops: {{ beer.ibu }} | ABV: {{ beer.abv }}</section>
     <div>Description: {{ beer.description }}</div>
-    <button ng-click="saveBeer(beer)">Add to Favs List</button>
     <br>
     <br>
   </div>

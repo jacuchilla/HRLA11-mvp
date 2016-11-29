@@ -1,6 +1,7 @@
 angular.module('beerGarden', [
   "beerGarden.form",
   "beerGarden.beerList",
+  "beerGarden.favBeerList",
   "beerGarden.services",
   "ngRoute"
   ])
@@ -14,6 +15,10 @@ angular.module('beerGarden', [
   .when('/beerList', {
     templateUrl: '/app/beerList/beerList.html',
     controller: 'BeerList'
+  })
+  .when('/favBeerList', {
+    templateUrl: '/app/favBeerList/favBeerList.html',
+    controller: 'FavBeerList'
   })
   .otherwise({
     redirectTo: '/'
