@@ -5,7 +5,7 @@ angular.module('beerGarden.beerList', [])
   $scope.saveBeer = function(beer) {
     // console.log('YOOOO HERES THE DATA ', beer.name)
     Services.saveToFavs(beer)
-    console.log('running next')
+    //console.log('running next')
     Services.callFavList()
   }
 })

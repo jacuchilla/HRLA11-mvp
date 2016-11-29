@@ -15,7 +15,7 @@ var Beer = mongoose.model('Beer', beerListSchema)
 
 var addBeerToFavs = function(data) {
   Beer.find({ id: data.id}, function(err, beer) {
-    console.log('AFGSFSDGER', beer.length)
+    //console.log('AFGSFSDGER', beer.length)
     if(err) throw err
     else if (beer.length === 0) {
       var newBeer = new Beer({ id: data.id, name: data.name, ibu: data.ibu, abv: data.abv, description: data.description })
@@ -33,7 +33,7 @@ var addBeerToFavs = function(data) {
 var getFavList = function(callback) {
   console.log('triggered GETFAVLIST in models')
   Beer.find({}, function(err, beers) {
-    console.log('GETFAVLIST data returned!!!! ', beers)
+    //console.log('GETFAVLIST data returned!!!! ', beers)
     callback(err, beers)
   })
 }

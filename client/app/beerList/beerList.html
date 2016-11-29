@@ -6,7 +6,8 @@
     <section id="name"> {{ beer.name }} </section>
     <section>Hops: {{ beer.ibu }} | ABV: {{ beer.abv }}</section>
     <div>Description: {{ beer.description }}</div>
-    <button ng-click="saveBeer(beer)">Add to Favs List</button>
+    <button ng-click="saveBeer(beer)" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-heart"></span> Add to Favs List</button>
     <br>
     <br>
   </div>

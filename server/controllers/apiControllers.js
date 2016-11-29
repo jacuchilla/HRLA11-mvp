@@ -22,7 +22,7 @@ var postFavBeerList = function(req, res) {
 var getFavBeerList = function(req, res) {
   console.log('triggered GETFAVBEERLIST REQ')
   models.getFavList(function(err, data){
-    res.send(data)
+    res.send(data.reverse())
   })
 }
 

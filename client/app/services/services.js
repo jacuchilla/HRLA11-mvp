@@ -27,7 +27,7 @@ angular.module('beerGarden.services', [])
       data: beer
     })
     .then(function(result) {
-      console.log('yes')
+      console.log('finished adding to favs!')
     })
 
   }

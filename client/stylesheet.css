@@ -1,7 +1,3 @@
-body {
-
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -27,11 +23,6 @@ section {
   font-size: 30px;
   font-weight: bold;
   font-style: normal;
-}
-
-.container {
-  position: relative;
-  background-color: white;
 }
 
 nav {
