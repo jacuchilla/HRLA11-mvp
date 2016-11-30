@@ -2,6 +2,7 @@ var mongoose = require('mongoose')
 
 var Schema = mongoose.Schema;
 
+// Here we are defining our Schema
 var beerListSchema = new Schema({
   id: String,
   name: String,
@@ -10,7 +11,7 @@ var beerListSchema = new Schema({
   description: String
 })
 
-
+// Here we are creating a Model (constructor/documents that can be saved and retrieved from our database) from our Schema
 var Beer = mongoose.model('Beer', beerListSchema)
 
 var addBeerToFavs = function(data) {
